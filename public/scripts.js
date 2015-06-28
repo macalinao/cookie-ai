@@ -16,7 +16,7 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
 .controller('HomeCtrl', function($scope) {
 })
 
-.controller('DashboardCtrl', function ($scope, $timeout) {
+.controller('DashboardCtrl', function ($scope, $timeout, $http) {
     //-------------------------------------------------------------------------
     $scope.clock = "loading clock..."; // initialise the time variable
     $scope.tickInterval = 1000 //ms
@@ -76,4 +76,9 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     $scope.type = type;
   };
   $scope.random();
+
+  $scope.recipe = {};
+  $http.get('/dashboard').success(function(data) {
+    $scope.recipe = data;
+  });
 });
