@@ -77,11 +77,13 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
   };
   $scope.random();
 
-  $scope.session = {};
+  $scope.session = {
+    heat: 'off'
+  };
   function pollYo() {
     $http.get('/dashboard').success(function(data) {
       $scope.session = data;
-      $scope.heatLevel = data.heat || 'off';
+      $scope.heatLevel = $scope.session.heat || 'off';
       setTimeout(pollYo, 1000);
     });
   }
