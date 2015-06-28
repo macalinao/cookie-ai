@@ -7,7 +7,7 @@
     <link href="bower_components/components-font-awesome/css/font-awesome.css" rel="stylesheet" />
     <div ng-include="'templates/_navbar.html'"></div>
 	<div class="jumbotron">
-	<img src="logo.png">
+	<img src="logo.png" width="800" height = "200">
 	</div>	
   </head>
   <body>
