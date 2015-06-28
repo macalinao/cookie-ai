@@ -10,6 +10,7 @@
     <div ui-view></div>
     <!-- Add your controllers when data is passed in --> 
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jqueryui.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>

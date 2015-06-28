@@ -9,6 +9,11 @@
 	    {{counter}}
 	    <button ng-click="start()">Start</button>    
        	    </div>
+	     
     </div>
   </div>
+
+    <small><em>Temperature </em></small>
+    <progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}</progressbar>
+    <button ng-click="random()">Random</button>    
 </div>

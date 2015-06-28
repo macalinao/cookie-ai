@@ -57,4 +57,28 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     }
 
     //-------------------------------------------------------------------------
+    // To Plot Progress Bar 
+      $scope.max = 200;
+
+  $scope.random = function() {
+    var value = Math.floor((Math.random() * 100) + 1);
+    var type;
+
+    if (value < 25) {
+      type = 'Too Cold';
+    } else if (value < 50) {
+      type = 'Higher';
+    } else if (value < 75) {
+      type = 'Just Good';
+    } else {
+      type = 'Too Hot';
+    }
+
+    $scope.showWarning =true ;
+
+    $scope.dynamic = value;
+    $scope.type = type;
+  };
+  $scope.random();
+
 }); 
