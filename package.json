@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha -R spec --compilers js:babel/register",
-    "start": "babel-node app"
+    "start": "babel-node app",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
