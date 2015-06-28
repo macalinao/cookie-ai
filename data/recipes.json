@@ -39,4 +39,21 @@
       "message":"DRAIN immediately and serve warm. OR, cool completely under cold running water or in bowl of ice water, then REFRIGERATE."
     }
   ]
-}]
+},
+  {
+    "name":"hot chocolate",
+    "ingredients":[
+      "3 cups of sugar", "2 cups of cocoa", "1 tablespoon table salt", "whole milk or any milk of your choice"
+    ],
+    "supplies":[
+      "mug"
+    ],
+    "steps":[
+      {
+        "message":"In a large bowl, combine sugar, cocoa, and salt, and whisk to combine well."
+      },
+      {
+        "message":" pour 1 cup whole milk into a microwave-safe mug, and microwave on high just until hot. Add 2 tablespoons of cocoa mix, and stir to dissolve."
+      }
+    ]
+  }]
