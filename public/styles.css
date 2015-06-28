@@ -22,3 +22,10 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #ccc;
+  font-size: 20px;
+}
