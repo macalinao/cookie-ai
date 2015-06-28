@@ -5,22 +5,18 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     url: '/',
     templateUrl: 'templates/home.html',
     controller: 'HomeCtrl'
+  }).state('dashboard', {
+    url: '/',
+    templateUrl: 'templates/dashboard.html',
+    controller: 'DashboardCtrl'
   });
   $urlRouterProvider.otherwise('/');
 })
 
-/*
-// Home Controller doesn't do anything now. 
 .controller('HomeCtrl', function($scope) {
-	$scope.exist = true; 
-	$scope.timer = 100;
-	$scope.currTime = 30; 
-	$scope.timeLeft = function () {
-		return $scope.timer - $scope.currTime; 
-	}
-});
-*/
-.controller('HomeCtrl', function TimeCtrl($scope, $timeout) {
+})
+
+.controller('DashboardCtrl', function ($scope, $timeout) {
     //-------------------------------------------------------------------------
     $scope.clock = "loading clock..."; // initialise the time variable
     $scope.tickInterval = 1000 //ms
