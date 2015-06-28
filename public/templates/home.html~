@@ -18,13 +18,10 @@
 
   <div class="row">
 	  
-    <div class="col-md-4">
+    <div class="col-md-6">
     <button ng-click="random()">Random</button>    
     </div>
-    <div class="col-md-4">
-	    <p> "{{ message }}" </p> 
-    </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
     <img ng-src="{{type == 'Too Hot' && 'big.png' || type == 'Too Cold' && 'small.png' || type == 'Higher' &&  'medium.png' || 'okay.png' }}"  width = "250" height = "200" />
     </div>
     </div>
