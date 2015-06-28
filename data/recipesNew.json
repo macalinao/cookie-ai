@@ -1,0 +1,42 @@
+[{
+  "name":"Asian Chicken",
+  "ingredients":[
+    "chicken", "black soya sauce" , "salt", "sugar"
+  ],
+  "supplies":[
+    "saucepan"
+  ],
+  "steps":[
+    {
+      "message":"PLACE eggs in saucepan large enough to hold them in single layer."
+    },
+    {
+      "message":"ADD cold water to cover eggs by 1 inch."
+    },
+    {
+      "message":"HEAT over high heat just to boiling.",
+      "action":{
+        "type":"oven_heat",
+        "amount":"high"
+      },
+      "trigger":{
+        "type":"temperature_reached",
+        "value":"212F",
+        "done":"Temperature reached."
+      }
+    },
+    {
+      "message":"REMOVE from burner and cover pan."
+    },
+    {
+      "message":"LET EGGS STAND in hot water about 12 minutes.",
+      "action":{
+        "type":"timer",
+        "duration":"12 minutes"
+      }
+    },
+    {
+      "message":"DRAIN immediately and serve warm. OR, cool completely under cold running water or in bowl of ice water, then REFRIGERATE."
+    }
+  ]
+}]

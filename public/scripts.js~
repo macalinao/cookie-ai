@@ -83,6 +83,4 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
   };
   $scope.random();
 
-    //-------------------------------------------------------------------------
-  $scope.message = "To Be Changed"; 
 }); 
