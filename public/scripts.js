@@ -21,9 +21,10 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
 });
 */
 .controller('HomeCtrl', function TimeCtrl($scope, $timeout) {
+    //-------------------------------------------------------------------------
     $scope.clock = "loading clock..."; // initialise the time variable
     $scope.tickInterval = 1000 //ms
-
+    // Reset to show the latest Date.now() every 1 second 
     var tick = function() {
         $scope.clock = Date.now() // get the current time
         $timeout(tick, $scope.tickInterval); // reset the timer
@@ -31,4 +32,29 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
 
     // Start the timer
     $timeout(tick, $scope.tickInterval);
+    //-------------------------------------------------------------------------
+    $scope.counter = 10;
+    var mytimeout = 0;
+    $scope.onTimeout = function(){
+        $scope.counter--;
+	if ($scope.counter <= 0) 
+	{
+		$timeout.cancel(mytimeout); // cancel the timeout  
+	}
+	else 
+	{
+		mytimeout = $timeout($scope.onTimeout,1000);
+	}
+    }
+    mytimeout = $timeout($scope.onTimeout,1000);
+
+    $scope.stop = function(){
+        $timeout.cancel(mytimeout);
+    }
+    $scope.start = function() {
+	    $scope.counter = 15; // initialize to 15 
+	    mytimeout = $timeout($scope.onTimeout,1000);
+    }
+
+    //-------------------------------------------------------------------------
 }); 
