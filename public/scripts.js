@@ -6,7 +6,7 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     templateUrl: 'templates/home.html',
     controller: 'HomeCtrl'
   }).state('dashboard', {
-    url: '/',
+    url: '/dashboard',
     templateUrl: 'templates/dashboard.html',
     controller: 'DashboardCtrl'
   });
@@ -54,8 +54,6 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
 	    mytimeout = $timeout($scope.onTimeout,1000);
     }
 
-    //-------------------------------------------------------------------------
-    // To Plot Progress Bar 
       $scope.max = 200;
 
   $scope.random = function() {
@@ -78,7 +76,4 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     $scope.type = type;
   };
   $scope.random();
-
-    //-------------------------------------------------------------------------
-  $scope.message = "To Be Changed"; 
-}); 
+});
