@@ -10,6 +10,11 @@
   font-size: 20px;
 }
 
+.row.promo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .maino {
   background: url(/assets/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
