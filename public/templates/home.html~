@@ -1,43 +1,65 @@
+<div class="jumbotron maino">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <img src="/assets/logo_with_subtitle.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row promo">
+    <div class="col-md-6">
+      <h2>Your hands-free cooking companion.</h2>
+      <p><strong>Cookie</strong> makes it easy to cook food without having to manage cookbooks. Using the Amazon Alexa and an intuitive natural language interface, Cookie converses with you as if she were a chef teaching you what to do.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="/assets/alexa.jpg" class="img-rounded" />
+    </div>
+  </div>
+
+  <div class="row promo">
+    <div class="col-md-6">
+      <img src="/assets/cooking.jpg" height="300" class="img-rounded" />
+    </div>
+    <div class="col-md-6">
+      <h2>Cook anything.</h2>
+      <p>Using the powerful <strong>BigOven API</strong>, Cookie allows you to choose from a myriad of dishes. Always leave your family or guests excited with new recipes every day.</p>
+    </div>
+  </div>
+
+</div>
+
 <div class="container" ng-controller='HomeCtrl'>
   <div class="row">
 
     <div class="col-md-12">
-	    <!--<h1>Home</h1> --> 
+	    <!--<h1>Home</h1> -->
 	    <p>{{ clock  | date:'medium'}}</p>
-	    
-	    <h3> <timer countdown="100" interval="1000"> {{countdown}} </timer> </h3> 
+	    <h3> <timer countdown="100" interval="1000"> {{countdown}} </timer> </h3>
 	    <div>
 	    {{counter}}
-	    <button ng-click="start()">Start</button>    
+	    <button ng-click="start()">Start</button>
        	    </div>
-	     
     <small><em>Temperature </em></small>
     <progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}</progressbar>
     </div>
   </div>
 
   <div class="row">
-	  
     <div class="col-md-6">
-    <button ng-click="random()">Random</button>    
-    </div>
+	    <h3> Status: {{message}}</h3>
+	   </div>
     <div class="col-md-6">
     <img ng-src="{{type == 'Too Hot' && 'big.png' || type == 'Too Cold' && 'small.png' || type == 'Higher' &&  'medium.png' || 'okay.png' }}"  width = "250" height = "200" />
     </div>
     </div>
   <div class="row">
-	  
-    <div class="col-md-4">
-	    <h4> Title 1 </h4> 
-	    <p> Haha, Pride Day ! </br> So what </br> Lala </br> baba </p>
-	   </div> 
-	    
-    <div class="col-md-4">
-	    <h4> Title 2 </h4> 
-	    <p> Haha, Pride Day ! </br> So what </br> Lala </br> baba </p>
-	   </div> 
-    <div class="col-md-4">
-	    <h4> Title 3 </h4> 
-	    <p> Haha, Pride Day ! </br> So what </br> Lala </br> baba </p>
-	   </div> 
+
+    <div class="col-md-12">
+    <button ng-click="random()">Random</button>
+    </div>
+
 </div>
