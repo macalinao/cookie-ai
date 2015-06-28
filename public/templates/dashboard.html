@@ -32,7 +32,7 @@
       <small><em>Temperature </em></small>
       <progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}</progressbar>
 
-      <img ng-src="/images/{{type == 'Too Hot' && 'big.png' || type == 'Too Cold' && 'small.png' || type == 'Higher' &&  'medium.png' || 'okay.png' }}" width="250" height="200" />
+      <img ng-src="/images/{{heatLevel}}.png" width="250" height="200" />
     </div>
 
   </div>

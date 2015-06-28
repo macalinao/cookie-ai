@@ -81,6 +81,7 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
   function pollYo() {
     $http.get('/dashboard').success(function(data) {
       $scope.session = data;
+      $scope.heatLevel = data.heat || 'off';
       setTimeout(pollYo, 1000);
     });
   }
