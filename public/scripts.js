@@ -77,8 +77,12 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
   };
   $scope.random();
 
-  $scope.recipe = {};
-  $http.get('/dashboard').success(function(data) {
-    $scope.recipe = data;
-  });
+  $scope.session = {};
+  function pollYo() {
+    $http.get('/dashboard').success(function(data) {
+      $scope.session = data;
+      setTimeout(pollYo, 1000);
+    });
+  }
+  pollYo();
 });

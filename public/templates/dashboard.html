@@ -1,8 +1,19 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-6" ng-if="!session.recipe">
       <h1>Recipe</h1>
+      <p>Start cooking and your recipe will show here.</p>
+    </div>
+
+    <div class="col-md-6" ng-if="session.recipe">
+      <h1>{{ recipe.recipe.name }}</h1>
+      <ul>
+        <li ng-repeat="step in session.recipe.steps">
+          <p ng-if="$index != session.lastStepIndex">{{ step.message }}</p>
+          <p ng-if="$index == session.lastStepIndex"><strong>{{ step.message }}</strong></p>
+        </li>
+      </ul>
     </div>
 
     <div class="col-md-6">
