@@ -3,6 +3,12 @@
     <div class="col-md-12">
       <h1>Home</h1>
 	    <p>{{ clock  | date:'medium'}}</p>
+	    
+	    <h3> <timer countdown="100" interval="1000"> {{countdown}} </timer> </h3> 
+	    <div>
+	    {{counter}}
+	    <button ng-click="start()">Start</button>    
+       	    </div>
     </div>
   </div>
 </div>
