@@ -52,6 +52,8 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
         $timeout.cancel(mytimeout);
     }
     $scope.start = function() {
+	    // Cancel any previous mytimeout request  
+	    $timeout.cancel(mytimeout);
 	    $scope.counter = 15; // initialize to 15 
 	    mytimeout = $timeout($scope.onTimeout,1000);
     }

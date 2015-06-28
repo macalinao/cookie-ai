@@ -1,7 +1,8 @@
 <div class="container" ng-controller='HomeCtrl'>
   <div class="row">
+
     <div class="col-md-12">
-      <h1>Home</h1>
+	    <!--<h1>Home</h1> --> 
 	    <p>{{ clock  | date:'medium'}}</p>
 	    
 	    <h3> <timer countdown="100" interval="1000"> {{countdown}} </timer> </h3> 
@@ -13,7 +14,7 @@
     </div>
   </div>
 
-    <small><em>Object (changes type based on value)</em></small>
+    <small><em>Temperature </em></small>
     <progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}</progressbar>
     <button ng-click="random()">Random</button>    
 </div>
