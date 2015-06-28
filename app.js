@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 let app = express();
 
 app.use(express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/assets'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
