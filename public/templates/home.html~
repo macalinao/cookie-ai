@@ -7,8 +7,13 @@
 	    <h3> <timer countdown="100" interval="1000"> {{countdown}} </timer> </h3> 
 	    <div>
 	    {{counter}}
-	    <button ng-click="stop()">Stop</button>    
+	    <button ng-click="start()">Start</button>    
        	    </div>
+	     
     </div>
   </div>
+
+    <small><em>Object (changes type based on value)</em></small>
+    <progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}</progressbar>
+    <button ng-click="random()">Random</button>    
 </div>
